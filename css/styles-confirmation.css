@@ -1,0 +1,88 @@
+.validation-container {
+  width: 480px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40px;
+  font-family: 'Roboto';
+  margin-top: 40px;
+}
+.validation-row {
+  background-color: #fff;
+  width: 100%;
+  float: left;
+  margin-top: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 80px 30px 25px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.validation-success {
+  position: absolute;
+  top: -50px;
+  left: 145px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #60c878;
+  border: 5px solid #fff;
+}
+.validation-success i {
+  color: #fff;
+  line-height: 100px;
+  font-size: 45px;
+}
+.validation-msg {
+  text-transform: uppercase;
+  color: #55585b;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.validation-submsg {
+  color: #959a9e;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+.validation-body {
+  background-color: #f8f6f6;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 30px;
+  float: left;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.validation-price {
+  color: #232528;
+  text-align: left;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.validation-id-title {
+  color: #232528;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.validation-id-body {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.validation-id {
+  text-transform: uppercase;
+  color: #232528;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 3px;
+}

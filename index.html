@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="modules/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="modules/font-awesome/5.13.0/css/all.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<!-- JS -->
+		<script type="text/javascript" src="modules/jquery/js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="modules/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/functions-globale.js"></script>
+		<script type="text/javascript" src="js/functions-index.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<!-- HEADER -->
+			<div id="header">
+				<h1 class="txt-white"><img src="pic.png" alt="" />ORINOCO</h1>
+
+				<!-- NAVBAR -->
+				<div class="navbarx">
+					<a href="index.html">Acceuil boutique</a>
+					<a href="valider-commande.html" id="cart_menu" style="float: right;"></a>
+				</div>
+			</div>
+			<!-- BODY -->
+			<div id="main">
+				<div class="entete">
+					<h3>Liste de tous les articles disponibles la vente.</h3>
+					<p> ● Ours en peluche faits à la main</p>
+				</div>
+				<!-- PORDUCT LIST -->
+				<div id="product_list"></div>
+			</div>
+			<!-- FOOTER -->
+			<div id="footer" class="txt-white">
+				<h1>Mon ours teddy</h1>
+				<p>Copyright &#xA9 2020 ORINOCO. All Rights Reserved</p>
+			</div>
+			<!-- JS -->
+			<script>
+				// SHOW CART MENU VALUE				
+				UpdateCartValue();
+				// GET ALL PRODUCT "teddies"
+				GetAllProduct("teddies", ShowProductList);
+			</script>
+		</div>
+	</body>
+</html>

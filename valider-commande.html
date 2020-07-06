@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/styles-commander.css">
+		<link rel="stylesheet" href="modules/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="modules/font-awesome/5.13.0/css/all.css">
+		<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' type='text/css'>
+		<!-- JS -->
+		<script type="text/javascript" src="modules/jquery/js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="modules/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/functions-globale.js"></script>
+		<script type="text/javascript" src="js/functions-valider_commande.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<!-- HEADER -->
+			<div id="header">
+				<h1 class="txt-white"><img src="pic.png" alt="" />ORINOCO</h1>
+				<!-- NAVBAR -->
+				<div class="navbarx">
+					<a href="index.html">Acceuil boutique</a>
+					<a href="valider-commande.html" id="cart_menu" style="float: right;"></a>
+				</div>
+			</div>
+			<!-- BODY -->
+			<div id="main">
+				<!-- FORM "FORMULAIRE & PANIER" -->
+				<div class="row">
+					<!-- FORMULAIRE -->
+					<div class="col-50">
+						<div class="container">
+							<div class="row">
+								<div class="col-50">
+									<h3>Info contact</h3>
+									<div class="row">
+										<div class="col-50">
+											<!-- NOM -->
+											<div id="ic-field_nom" class="ic-field">
+												<div class="field-description input-placeholder field-description-show"><label for="nom"><i class="fa fa-user"></i> Nom</label>		</div>
+												<input type="text" id="nom" name="nom" placeholder="Dupond" onfocusout="validate('nom');" onkeypress='return  event.charCode == 32 || event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
+												<div id="ic-message_nom" class="ic-message"><i class="fas fa-exclamation-circle" style="color:#FF0000;"></i> Veuillez saisir le nom tel qu'il figure sur une pièce d'identité</div>
+											</div>
+										</div>
+										<div class="col-50">
+											<!-- PRENOM -->
+											<div id="ic-field_prenom" class="ic-field">
+												<div class="field-description input-placeholder field-description-show"><label for="prenom"><i class="fa fa-user"></i> Prénom</label></div>
+												<input type="text" id="prenom" name="prenom" placeholder="Jean" onfocusout="validate('prenom');" onkeypress='return  event.charCode == 32 || event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
+												<div id="ic-message_prenom" class="ic-message"><i class="fas fa-exclamation-circle" style="color:#FF0000;"></i> Veuillez saisir un prénom valide tel qu'il figure sur une pièce d'identité</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-50">
+											<!-- ADRESSE -->
+											<div id="ic-field_adresse" class="ic-field">
+												<div class="field-description input-placeholder field-description-show"><label for="adresse"><i class="fas fa-address-card"></i> Adresse</label></div>
+												<input type="text" id="adresse" name="adresse" placeholder="145 rue La Fayette 10e" onfocusout="validate('adresse');" onkeypress='return  event.charCode == 32 || event.charCode >= 48 && event.charCode <= 57 || event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
+												<div id="ic-message_adresse" class="ic-message"><i class="fas fa-exclamation-circle" style="color:#FF0000;"></i> Veuillez saisir une adresse valide tel quelle figure sur une pièce d'identité</div>
+											</div>
+										</div>
+										<div class="col-50">
+											<!-- VILLE -->
+											<div id="ic-field_ville" class="ic-field">
+												<div class="field-description input-placeholder field-description-show"><label for="ville"><i class="fas fa-city"></i> Ville</label></div>
+												<input type="text" id="ville" name="ville" placeholder="Paris" onfocusout="validate('ville');" onkeypress='return  event.charCode == 32 || event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
+												<div id="ic-message_ville" class="ic-message"><i class="fas fa-exclamation-circle" style="color:#FF0000;"></i> Veuillez saisir le nom de la ville de residence tel quelle figure sur une pièce d'identité</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-50">
+											<!-- EMAIL -->
+											<div id="ic-field_email" class="ic-field">
+												<div class="field-description input-placeholder field-description-show"><label for="email"><i class="fa fa-envelope"></i> Email</label></div>
+												<input type="text" id="email" name="email" placeholder="jean.dupond@example.com" onfocusout="validate('email');">
+												<div id="ic-message_email" class="ic-message"><i class="fas fa-exclamation-circle" style="color:#FF0000;"></i> Veuillez saisir une adresse email valide</div>
+											</div>
+										</div>
+										<div class="col-50"></div>
+									</div>
+								</div>
+							</div>
+							<input id="btn_valider" type="submit" value="Valider la commande" class="btn" onclick="SendBuyRequest('teddies', ShowServerResponse);">
+						</div>
+					</div>
+					<!-- PANIER -->
+					<div class="col-50" >
+						<div id="cart_item_list" class="container" style="margin: 0 auto;"></div>
+					</div>
+				</div>
+			</div>
+			<!-- FOOTER -->
+			<div id="footer" class="txt-white">
+				<h1>Mon ours teddy</h1>
+				<p>Copyright &#xA9 2020 ORINOCO. All Rights Reserved</p>
+			</div>
+			<!-- JS -->
+			<script>
+				// SHOW CART MENU VALUE
+				UpdateCartValue();
+				// SHOW CART ITEMS
+				ShowCart();
+			</script>
+		</div>
+	</body>
+</html>

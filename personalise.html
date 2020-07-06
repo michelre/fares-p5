@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/styles-personalise.css">
+		<link rel="stylesheet" href="modules/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="modules/font-awesome/5.13.0/css/all.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+		<!-- JS -->
+		<script type="text/javascript" src="modules/jquery/js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="modules/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/functions-globale.js"></script>
+		<script type="text/javascript" src="js/functions-personalise.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<!-- HEADER -->
+			<div id="header">
+				<h1 class="txt-white"><img src="pic.png" alt="" />ORINOCO</h1>
+				<!-- NAVBAR -->
+				<div class="navbarx">
+					<a href="index.html">Acceuil boutique</a>
+					<a href="valider-commande.html" id="cart_menu" style="float: right;"></a>
+				</div>
+			</div>
+			<!-- BODY -->
+			<div id="main">
+				<!-- CUSTOMISE PRODUCT -->
+				<div class="container">
+					<div class="product">
+						<div class="product-photo">
+							<div id="product_image" class="photo-container"></div>
+						</div>
+						<div class="product__info">
+							<div id="product_info" class="title"></div>
+							<div id="product_price" class="price"></div>
+							<div class="variant">
+								<h3>Selectionnez la couleur</h3>
+								<ul id="product_color"></ul>
+							</div>
+							<div class="description">
+								<h3>Description</h3>
+								<p id="product_description"></p>
+							</div>
+							<button class="buy--btn" onclick="AddItemToCart();">AJOUTER AU PANIER</button><button class="buy--btn" style="margin-left:20px;" onclick="window.location.href='index.html'">CONTINUER MES ACHATS</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- FOOTER -->
+			<div id="footer" class="txt-white">
+				<h1>Mon ours teddy</h1>
+				<p>Copyright &#xA9 2020 ORINOCO. All Rights Reserved</p>
+			</div>
+			<!-- JS -->
+			<script>
+				// SHOW CART MENU VALUE
+				UpdateCartValue();
+				// GET PRODUCT BY ID
+				GetProductById("teddies", GetProductId(), ShowProduct);
+
+				//deleteCookie("ORINOCO-CART");
+			</script>
+		</div>
+	</body>
+</html>
